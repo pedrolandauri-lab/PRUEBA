@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIN Telecom - Manual Elite de Objeciones (PRO V6 - 54 Guiones)</title>
+    <style>
+        :root {
+            --primary: #FF5A0A;
+            --primary-glow: rgba(255, 90, 10, 0.35);
+            --primary-hover: #E04B00;
+            --bg: #090D16;
+            --card-bg: rgba(21, 29, 46, 0.85);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #F1F5F9;
+            --text-muted: #94A3B8;
+            --glass: rgba(15, 23, 42, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            
+            --tech-bg: rgba(37, 99, 235, 0.15);
+            --tech-border: #3B82F6;
+            --tech-text: #93C5FD;
+            
+            --resp-bg: rgba(16, 185, 129, 0.12);
+            --resp-border: #10B981;
+            --resp-text: #A7F3D0;
+            
+            --close-bg: linear-gradient(135deg, rgba(255, 90, 10, 0.25) 0%, rgba(180, 40, 0, 0.35) 100%);
+            --close-border: #FF5A0A;
+            --close-text: #FFEDD5;
+            
+            --hot-badge: #EF4444;
+            --highlight: #F59E0B;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="light"] {
+            --bg: #F1F5F9;
+            --card-bg: #FFFFFF;
+            --card-border: #E2E8F0;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --glass: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(0, 0, 0, 0.08);
+            
+            --tech-bg: #EFF6FF;
+            --tech-border: #2563EB;
+            --tech-text: #1E40AF;
+            
+            --resp-bg: #ECFDF5;
+            --resp-border: #059669;
+            --resp-text: #065F46;
+            
+            --close-bg: linear-gradient(135deg, #FFF5F0 0%, #FFECE3 100%);
+            --close-border: #FF5A0A;
+            --close-text: #832700;
+            
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            transition: background 0.25s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background: var(--glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            padding: 16px 20px;
+        }
+
+        .header-content {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-title-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .win-logo-badge {
+            background: linear-gradient(135deg, var(--primary) 0%, #D03E00 100%);
+            color: white;
+            font-weight: 900;
+            font-size: 1.1rem;
+            padding: 6px 14px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .title-text h1 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .title-text p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .kpi-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 90, 10, 0.08);
+            border: 1px solid rgba(255, 90, 10, 0.25);
+            padding: 8px 16px;
+            border-radius: 12px;
+        }
+
+        .kpi-info { text-align: right; }
+        .kpi-label { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+        .kpi-val { font-size: 1.1rem; font-weight: 900; color: var(--primary); }
+
+        .kpi-bar-outer {
+            width: 70px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .kpi-bar-inner {
+            width: 88%;
+            height: 100%;
+            background: linear-gradient(90deg, #FF5A0A 0%, #10B981 100%);
+            border-radius: 4px;
+        }
+
+        .header-actions { display: flex; gap: 8px; }
+
+        .btn-ctrl {
+            background: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+            padding: 7px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.82rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-ctrl:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .search-hud {
+            position: sticky;
+            top: 75px;
+            z-index: 900;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 12px;
+            border-radius: 14px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px 16px;
+            background: var(--bg);
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .search-bar:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .kbd-tag {
+            background: var(--card-border);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-weight: 800;
+        }
+
+        .count-pill {
+            font-size: 0.82rem;
+            color: var(--primary);
+            white-space: nowrap;
+            font-weight: 800;
+            background: rgba(255, 90, 10, 0.12);
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+
+        .chips-row {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .chip {
+            background: var(--bg);
+            color: var(--text-muted);
+            border: 1px solid var(--card-border);
+            padding: 5px 13px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .chip:hover, .chip.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 2px 8px var(--primary-glow);
+        }
+
+        .chip-hot {
+            border-color: rgba(239, 68, 68, 0.5);
+            color: #EF4444;
+        }
+
+        .chip-hot:hover, .chip-hot.active {
+            background: #EF4444;
+            color: white;
+            border-color: #EF4444;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .proof-card {
+            background: var(--card-bg);
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .proof-card h4 {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+
+        .proof-card p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .category-title {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin: 25px 0 12px 0;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+        }
+
+        .category-title span {
+            background: var(--primary);
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 900;
+        }
+
+        .objection-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .objection-item.is-hot {
+            border-left: 4px solid var(--hot-badge);
+        }
+
+        .objection-btn {
+            width: 100%;
+            background: transparent;
+            color: var(--text-main);
+            padding: 14px 18px;
+            border: none;
+            outline: none;
+            text-align: left;
+            font-size: 0.98rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .objection-btn:hover {
+            background: rgba(255, 90, 10, 0.05);
+        }
+
+        .obj-title-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .num { color: var(--primary); font-weight: 900; }
+
+        .badge-hot {
+            background: #EF4444;
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 2px 7px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .chevron {
+            font-size: 1rem;
+            color: var(--primary);
+            pointer-events: none;
+        }
+
+        .objection-item.active .chevron {
+            transform: rotate(180deg);
+        }
+
+        .objection-content {
+            display: none;
+            background: var(--bg);
+            border-top: 1px solid var(--card-border);
+            padding: 18px;
+        }
+
+        .objection-item.active .objection-content {
+            display: block;
+        }
+
+        .sec-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .sec-label {
+            font-size: 0.72rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .label-tech { color: var(--tech-border); }
+        .label-resp { color: var(--resp-border); }
+        .label-close { color: var(--primary); }
+
+        .btn-copy {
+            background: var(--card-bg);
+            color: var(--text-muted);
+            border: 1px solid var(--card-border);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn-copy:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-copy.copied {
+            background: #10B981 !important;
+            color: white !important;
+            border-color: #10B981 !important;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+
+        .block-box {
+            padding: 12px 16px;
+            border-radius: 10px;
+            border-left: 4px solid;
+            margin-bottom: 12px;
+            font-size: 0.92rem;
+            position: relative;
+        }
+
+        .block-tech {
+            border-left-color: var(--tech-border);
+            background: var(--tech-bg);
+            color: var(--tech-text);
+        }
+
+        .block-resp {
+            border-left-color: var(--resp-border);
+            background: var(--resp-bg);
+            color: var(--resp-text);
+        }
+
+        .block-close {
+            border-left-color: var(--close-border);
+            background: var(--close-bg);
+            color: var(--close-text);
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(255, 90, 10, 0.12);
+        }
+
+        .proof-tag {
+            display: inline-block;
+            background: rgba(3, 105, 161, 0.2);
+            color: #38BDF8;
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin-top: 6px;
+        }
+
+        mark {
+            background-color: var(--highlight);
+            color: #000;
+            padding: 0 3px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .floating-hud {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--primary);
+            box-shadow: 0 10px 30px var(--primary-glow);
+            padding: 8px 18px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 2000;
+        }
+
+        .hud-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .dot-live {
+            width: 10px;
+            height: 10px;
+            background: #10B981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10B981;
+        }
+
+        .btn-hud {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .btn-hud:hover {
+            background: var(--primary-hover);
+        }
+
+        body.mode-compact .container { max-width: 1200px; }
+        body.mode-compact .objection-btn { padding: 8px 12px; font-size: 0.9rem; }
+        body.mode-compact .block-box { padding: 8px 12px; font-size: 0.85rem; margin-bottom: 8px; }
+        body.mode-compact .proof-grid { display: none; }
+
+        .hud-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(10px);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hud-modal-card {
+            background: var(--card-bg);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            max-width: 650px;
+            width: 100%;
+            padding: 24px;
+            box-shadow: 0 0 30px var(--primary-glow);
+            position: relative;
+        }
+
+        .hud-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 50px;
+            color: var(--text-muted);
+            display: none;
+            font-size: 1.1rem;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #10B981;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 4000;
+            pointer-events: none;
+        }
+
+        .toast.show { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 640px) {
+            .title-text h1 { font-size: 1.1rem; }
+            .kpi-container { display: none; }
+            .search-hud { top: 70px; }
+            .floating-hud { width: 90%; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-title-area">
+                <div class="win-logo-badge">WIN</div>
+                <div class="title-text">
+                    <h1>Manual Elite de Objeciones (PRO V6)</h1>
+                    <p>54 Guiones Telefónicos con Cierre Agresivo & HUD Interactivo</p>
+                </div>
+            </div>
+
+            <div class="kpi-container">
+                <div class="kpi-info">
+                    <div class="kpi-label">Cierre Esperado</div>
+                    <div class="kpi-val">88% Éxito</div>
+                </div>
+                <div class="kpi-bar-outer">
+                    <div class="kpi-bar-inner"></div>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="btn-ctrl" onclick="toggleCompactMode()">
+                    <span id="compactIcon">⚡</span> <span id="compactText">Modo Compacto</span>
+                </button>
+                <button class="btn-ctrl" onclick="toggleTheme()">
+                    <span id="themeIcon">☀️</span> <span id="themeText">Modo Claro</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="search-hud">
+            <div class="search-row">
+                <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Buscar objeción en tiempo real... (Presiona '/' para enfocar)" onkeyup="filterObjections()">
+                <span class="kbd-tag">/</span>
+                <span class="count-pill" id="resultsCount">54 Objeciones</span>
+            </div>
+            <div class="chips-row">
+                <button class="chip active" onclick="filterByChip('all', this)">Todas (54)</button>
+                <button class="chip chip-hot" onclick="filterByChip('hot', this)">🔥 Alta Frecuencia (12)</button>
+                <button class="chip" onclick="filterByChip('Precio', this)">💰 Precio y Valor</button>
+                <button class="chip" onclick="filterByChip('Calidad', this)">⚡ Calidad/Velocidad</button>
+                <button class="chip" onclick="filterByChip('Marca', this)">🛡️ Marca/Competencia</button>
+                <button class="chip" onclick="filterByChip('Terceros', this)">👥 Decisiones/Terceros</button>
+                <button class="chip" onclick="filterByChip('Postergar', this)">⏱️ Postergar/Tiempo</button>
+                <button class="chip" onclick="filterByChip('Instalación', this)">🔧 Instalación/Técnicos</button>
+                <button class="chip" onclick="filterByChip('Experiencia', this)">🤝 Experiencia/TV</button>
+            </div>
+        </div>
+
+        <div class="proof-grid">
+            <div class="proof-card">
+                <h4>NPERF 2024</h4>
+                <p>N° 1 en velocidad y estabilidad de banda ancha en el Perú.</p>
+            </div>
+            <div class="proof-card">
+                <h4>OOKLA Speedtest</h4>
+                <p>5 Premios consecutivos por menor latencia y red más rápida.</p>
+            </div>
+            <div class="proof-card">
+                <h4>OSIPTEL 2025</h4>
+                <p>83% satisfacción de usuario + 34.26% cuota en Lima/Callao.</p>
+            </div>
+            <div class="proof-card">
+                <h4>IZO BCX Award</h4>
+                <p>Líder absoluto en experiencia al cliente en telecomunicaciones.</p>
+            </div>
+        </div>
+
+        <div id="objectionsContainer">
+
+            <!-- Categoria 1 -->
+            <div class="category-group" data-category="Precio">
+                <div class="category-title"><span>1</span> Objeciones sobre el Precio y Valor (7)</div>
+                <!-- Obj #01 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#01</span> "En otra empresa me ofrecen más megas por menos precio" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Reencuadrar de "megas en papel" a "velocidad real simétrica 24/7" y cuestionar la tecnología del competidor.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Lo entiendo perfectamente. Muchas empresas le ofrecen una cifra alta de megas pero con cable coaxial o fibra compartida que en hora punta se cae a la mitad. WIN le entrega 100% fibra óptica simétrica con garantía de velocidad constatada por nPerf y Ookla. Es decir, megas reales y constantes las 24 horas."
+                            <br><span class="proof-tag">Respaldo: Premios nPerf / Ookla</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para asegurar que empiece con velocidad 100% real, ¿la instalación la prefiere para mañana en el turno mañana de 8 a 12 o por la tarde de 12 a 4?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #02 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#02</span> "No quiero pagar más de lo que pago actualmente" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Comparar el costo por mega real y destacar el ahorro por cero cortes y soporte prioritario.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo totalmente que cuide su presupuesto mensual. Pero evalúe esto: hoy usted paga por un servicio que cuando falla le hace perder horas de trabajo o estudio. Con WIN le garantizamos 100% estabilidad por el mismo rango de precio, ahorrándole molestias y malos ratos."
+                            <br><span class="proof-tag">Respaldo: 83% Satisfacción OSIPTEL</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para dejar reservada la promoción con tarifa congelada sin cobros adicionales, ¿su correo para la boleta electrónica es en Gmail o Hotmail?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #03 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#03</span> "Ahora no tengo presupuesto para cambiarme" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Separar la reserva del costo inicial. Recordar costo S/ 0 de instalación en promoción.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Descuide, no le estamos pidiendo ningún desembolso hoy. En WIN la instalación entra en costo cero por promoción del mes. Usted solo empieza a pagar cuando el servicio esté 100% instalado y activo en su hogar."
+                            <br><span class="proof-tag">Respaldo: Instalación S/ 0 + Postpago</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Aprovechemos que la promoción vence hoy. Para separar el cupo de costo cero, ¿su número de DNI termina en número par o impar?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #04 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#04</span> "Voy a esperar alguna promoción o descuento mejor" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Generar escasez e inmediatez informando que la campaña especial por zona vence en la llamada.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Justamente la oferta que tengo en pantalla es la máxima campaña asignada para su zona esta semana con descuento en el recibo. Si esperamos, el sistema libera la caja de fibra para otro vecino y pierde el descuento."
+                            <br><span class="proof-tag">Respaldo: Cuotas de caja NAP limitadas</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para no perder este beneficio, ¿el titular de la ficha comercial será usted o prefiere colocar a algún familiar?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #05 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#05</span> "El servicio es muy caro (Enfocado en Valor y Empatía)" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Revalorizar beneficios con empatía y enfocar en la tranquilidad versus el costo de frustración.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo perfectamente que el costo es un factor importante para usted. Lo que ofrecemos es un servicio de internet con tecnología 100% fibra óptica que le garantiza velocidad y estabilidad constantes, además de soporte dedicado para que no tenga interrupciones. Muchas veces, ese valor adicional se refleja en la tranquilidad y mejor experiencia que tendrá a diario sin perder tiempo ni dinero por fallas del servicio."
+                            <br><span class="proof-tag">Respaldo: 100% Fibra Óptica & Soporte Dedicado</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para asegurarle esta calidad y tranquilidad en su hogar, ¿en qué distrito se encuentra para validar el puerto libre y agendar su instalación?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #06 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#06</span> "Tengo más velocidad por menos precio" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Contrastar velocidad 'en papel' contra velocidad y estabilidad real 24/7 sin saturación.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Es totalmente válido fijarse en precio y velocidad. Lo que muchos clientes nos comentan es que al cambiar a WIN 100% fibra óptica, la diferencia se nota en la tranquilidad de que el internet nunca falla ni se cae en hora punta. Nuestra conexión no solo entrega megas en teoría, sino velocidad y estabilidad real evitando frustraciones que a la larga cuestan tiempo y dinero."
+                            <br><span class="proof-tag">Respaldo: Velocidad Garantizada OSIPTEL</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "En su hogar, ¿a quién le afecta mayormente cuando todos usan el internet al mismo tiempo en las noches?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #07 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#07</span> "Mi operador me cobra menos" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Demostrar que lo 'barato sale caro' en términos de calidad de vida y estabilidad de red.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Entiendo, y es natural querer ahorrar. Sin embargo, con nuestro servicio de 100% fibra óptica notará la gran diferencia porque navegará con velocidad real y conexión estable sin interrupciones. Disfrutará de sus series, teletrabajo y redes sociales en alta calidad. Somos líderes en satisfacción según OSIPTEL, evitando los costos ocultos del mal servicio."
+                            <br><span class="proof-tag">Respaldo: Líder en Satisfacción OSIPTEL</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para confirmarle si ya llegamos a su cuadra con la promoción de instalación a costo cero, ¿en qué distrito reside?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 2 -->
+            <div class="category-group" data-category="Calidad">
+                <div class="category-title"><span>2</span> Objeciones sobre la Calidad y Velocidad (9)</div>
+                <!-- Obj #08 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#08</span> "¿Y si WIN se cae? No quiero quedarme sin internet" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Validar con métricas oficiales de estabilidad y menor latencia del mercado.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Entiendo su temor. Por eso WIN cuenta con el respaldo de Ookla Speedtest como la red más estable y de menor latencia del Perú. Nuestra fibra es 100% propia, no dependemos del cableado antiguo de otras empresas."
+                            <br><span class="proof-tag">Respaldo: Ookla Speedtest 2024</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para que compruebe la estabilidad desde mañana mismo, ¿programamos al técnico para las 10:00 AM o prefiere a las 3:00 PM?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #09 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#09</span> "He escuchado que WIN también tiene problemas de señal" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Refutar rumores con la tasa oficial de satisfacción de OSIPTEL.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo la duda, pero los números oficiales dicen lo contrario: según OSIPTEL, WIN tiene el 83% de satisfacción de usuario, el índice más alto entre las empresas de telecomunicaciones del país. Además somos reconocidos con el Premio IZO BCX a la mejor experiencia al cliente."
+                            <br><span class="proof-tag">Respaldo: OSIPTEL & Premio IZO BCX</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Comprobémoslo en su propio hogar. ¿Me confirma si la dirección de instalación exacta es la que figura en su DNI o es otra?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #10 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#10</span> "No sé si la velocidad realmente será la que me ofrecen" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Garantizar prueba de velocidad presencial al momento de la instalación.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Es normal desconfiar por malas experiencias anteriores. Por eso, con WIN el técnico realiza una prueba de velocidad en vivo en su pantalla antes de que usted firme la conformidad del servicio. Si no marca los megas contratados, no firma nada."
+                            <br><span class="proof-tag">Respaldo: Acta de prueba en vivo</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Agendemos de una vez para que haga esa prueba. ¿Prepara su celular o su laptop para realizar el test con el técnico el día de mañana?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #11 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#11</span> "Mi internet actual es suficiente para lo que hago" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Indagar saturación por múltiples equipos conectados simultáneamente.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Puede que parezca suficiente cuando hay un solo equipo, pero dígame: ¿cuántos celulares, Smart TVs y laptops se conectan en simultáneo en las noches? Ahí es donde las conexiones antiguas colapsan y WIN marca la diferencia con fibra dedicada."
+                            <br><span class="proof-tag">Respaldo: Fibra Dedicada Simétrica</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para asignarle el router Dual Band que soporta más de 20 equipos sin lentitud, ¿su domicilio es casa propia o alquilada?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #12 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#12</span> "No necesito tanta velocidad" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Ajustar al plan exacto y resaltar el valor de la velocidad de subida (simetría).</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "No se preocupe, no le voy a ofrecer un plan gigante si no lo requiere. Lo genial de WIN es que hasta en nuestro plan de entrada le damos velocidad simétrica: sube archivos, archivos pesados y llamadas sin lag al instante."
+                            <br><span class="proof-tag">Respaldo: Simetría 100%</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Le configuro el plan ideal. ¿Para el recibo mensual prefiere envío por WhatsApp o a su correo electrónico?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #13 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#13</span> "En mi casa somos pocos, no necesitamos un plan grande" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Pivotar de cantidad de personas a cantidad de artefactos o dispositivos conectados.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Así sean dos personas, hoy entre celulares, TVs, cámaras de seguridad y computadoras hay más de 8 dispositivos pidiendo internet a la vez. WIN garantiza estabilidad para todos sin que ninguno sufra entrecortes."
+                            <br><span class="proof-tag">Respaldo: Ancho de banda garantizado</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Dejemos listo el plan perfecto. ¿Me dicta su número de DNI para validar la cobertura de su puerto en el sistema?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #14 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#14</span> "¿Qué pasa si después de unos meses el servicio empieza a fallar?" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Respaldar con soporte técnico dedicado y garantía normada por OSIPTEL.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo su duda. En WIN garantizamos más del 70% de velocidad asegurada por norma OSIPTEL de forma continua y tenemos un centro de monitoreo las 24 horas. Somos más de 605 mil clientes satisfechos en Lima y Callao."
+                            <br><span class="proof-tag">Respaldo: 605,000+ Clientes WIN</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para coordinar la visita e instalación de su línea dedicada, ¿prefiere que el técnico vaya mañana antes del mediodía o por la tarde?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #15 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#15</span> "Ya tengo fibra óptica con mi operador (Aclaración de HFC Mix)" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Diferenciar la fibra mixta HFC/Coaxial de la Fibra Óptica 100% Pura y Simétrica de WIN.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "¡Excelente! Eligió fibra porque sabe que es la mejor tecnología, ¿verdad? Pero lo que sucede con operadores tradicionales como Claro o Movistar es que muchas veces brindan un servicio mixto (HFC con cable coaxial). ¿Recuerda ese momento en que quiso enviar un archivo o video y tardó en cargar? Eso jamás pasa con WIN porque nuestra fibra es 100% pura y simétrica de extremo a extremo."
+                            <br><span class="proof-tag">Respaldo: 100% FTTH Pura (Sin HFC)</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para comprobar si en su zona tenemos la caja de fibra pura disponible, ¿en qué distrito y calle se encuentra?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #16 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#16</span> "No creo que necesite tanta velocidad (Enfocado en Calidad Concurrente)" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Enfocar en la calidad y concurrencia de dispositivos en el hogar en lugar de velocidad bruta.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Lo entiendo perfectamente, a veces parece que no se necesita tanta velocidad. Pero imagine un día normal en casa: alguien en reunión o clases, otra persona trabajando y alguien viendo televisión o series al mismo tiempo. No se trata solo de la cantidad de megas, sino de la calidad y estabilidad del ancho de banda simétrico para que nadie sufra entrecortes."
+                            <br><span class="proof-tag">Respaldo: Ancho de Banda Simétrico Multidispositivo</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para recomendarle el plan exacto que necesita su hogar sin pagar de más, ¿en qué distrito se encuentra?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 3 -->
+            <div class="category-group" data-category="Marca">
+                <div class="category-title"><span>3</span> Desconfianza o Marca / Competencia (8)</div>
+                <!-- Obj #17 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#17</span> "Nunca he escuchado hablar de WIN" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Posicionar liderazgo técnico, cuota de mercado en Lima y distinción Marca Perú.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Le cuento: WIN es la empresa peruana de fibra óptica de mayor crecimiento, con el 34.26% del mercado en Lima y Callao. Además, somos la única empresa de telecomunicaciones distinguida como Marca Perú por nuestra alta calidad."
+                            <br><span class="proof-tag">Respaldo: Marca Perú & OSIPTEL 2025</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para que pruebe el internet número uno del país, ¿el titular de la instalación cuenta con DNI o Carnet de Extranjería?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #18 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#18</span> "Prefiero Movistar o Claro porque ya los conozco de años" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Aceptar la trayectoria pero contrastar con la antigüedad tecnológica de sus cables.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Es comprensible, son marcas antiguas. Pero justamente por ser antiguas, gran parte de su cableado es de cobre o coaxial mezclado. WIN nació 100% en fibra óptica pura. Por eso los rankings independientes de nPerf nos premian como el mejor operador del Perú."
+                            <br><span class="proof-tag">Respaldo: Premio nPerf 2024</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Dese la oportunidad de probar fibra óptica de verdad. ¿Le enviamos la confirmación del contrato a su correo personal o corporativo?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #19 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#19</span> "No quiero arriesgarme a cambiar de operador" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Desmantelar la percepción de riesgo garantizando cero interrupción durante el proceso.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Usted no arriesga absolutamente nada: nosotros instalamos y dejamos WIN funcionando en su casa ANTES de que usted dé de baja su servicio anterior. Así comprueba la calidad sin quedarse ni un minuto a oscuras."
+                            <br><span class="proof-tag">Respaldo: Migración protegida</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Hagámoslo así de seguro. ¿La instalación la realizamos el primer piso o en un piso superior?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #20 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#20</span> "Primero quiero preguntar a mis vecinos a ver si les funciona" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Usar la prueba social del vecindario/zona a favor de forma inmediata.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "¡Excelente idea! De hecho en su misma cuadra/urbanización ya tenemos a decenas de clientes conectados que han migrado a WIN. Por eso estamos ampliando la caja de fibra en su zona hoy día."
+                            <br><span class="proof-tag">Respaldo: Liderazgo zonal</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Garantice su punto de conexión antes de que se llenen los puertos libres de la caja. ¿Le agendamos la visita del técnico para mañana o para el sábado?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #21 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#21</span> "Quiero leer bien las condiciones antes de contratar" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Ofrecer lectura inmediata del contrato regulado y envío por WhatsApp en vivo.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Me parece muy profesional de su parte. Le puedo enviar en este preciso momento la ficha técnica y contrato regulado por OSIPTEL directamente a su WhatsApp mientras estamos en línea."
+                            <br><span class="proof-tag">Respaldo: Contrato Transparente OSIPTEL</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para enviárselo de inmediato, ¿su número de WhatsApp es este mismo desde el que me contesta o tiene otro número?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #22 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#22</span> "Estoy satisfecho con mi proveedor actual / pago menos" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Indagar los pilares de valoración (velocidad vs estabilidad) e identificar micro-fallas no percibidas.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Qué gusto escuchar eso, de verdad. Cuando un servicio funciona bien es normal mantenerse con él. Solo por curiosidad, ¿qué es lo que más valora de su proveedor actual: la velocidad, la estabilidad o el precio? Muchos clientes estaban satisfechos hasta que probaron la simetría 100% fibra de WIN y notaron la diferencia inmediata en horas punta."
+                            <br><span class="proof-tag">Respaldo: Velocidad Simétrica Real</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para verificar la cobertura de fibra óptica dedicada en su calle, ¿cuál es su dirección o distrito exacto?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #23 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#23</span> "No estoy seguro de cambiar" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Reducir el riesgo explicando que el contrato inicia solo tras la prueba exitosa con el técnico.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Lo entiendo perfectamente, mi intención no es presionarlo, sino ayudarlo a mejorar su servicio. Justamente para que pueda tomar la mejor decisión con total tranquilidad, podemos reservar un cupo generando la solicitud sin compromisos. Recuerde que el contrato se consolida solo cuando el técnico realiza la instalación y usted firma el acta tras probar la velocidad."
+                            <br><span class="proof-tag">Respaldo: Garantía de Activación en Acta</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para asegurarnos de que reciba todo lo prometido sin arriesgar nada, ¿me dicta su número de DNI para la reserva?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #24 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#24</span> "¿Cómo sé que la promoción es cierta?" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Garantizar transparencia mediante grabación auditada, WhatsApp inmediato y validación en contrato.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Entiendo su preocupación, es totalmente normal no querer llevarse sorpresas. Para su tranquilidad, esta llamada está siendo grabada y auditada oficialmente. Además, le puedo compartir la información detallada por WhatsApp con las credenciales oficiales de mi supervisor y realizamos la lectura de contrato donde figura el precio exacto sin cambios."
+                            <br><span class="proof-tag">Respaldo: Grabación de Seguridad & Contrato Transparente</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para mostrarle la promoción oficial activada en su zona y enviársela a su teléfono, ¿con qué operador cuenta actualmente en casa?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 4 -->
+            <div class="category-group" data-category="Terceros">
+                <div class="category-title"><span>4</span> Objeciones por Decisión o Terceros (7)</div>
+                <!-- Obj #25 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#25</span> "Tengo que consultarlo con mi esposo / esposa" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Aislar la duda y ofrecer preregistro con cancelación sin costo.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Perfecto, las decisiones del hogar se toman en pareja. Lo que podemos hacer para que se lo presente con la promoción asegurada es dejar generada la solicitud de reserva hoy. Si su pareja dice que no, se anula automáticamente sin penalidad."
+                            <br><span class="proof-tag">Respaldo: Reserva sin compromiso</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para dejarle la propuesta lista en pantalla, ¿el nombre de su pareja es con el que figura el recibo de luz o el suyo?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #26 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#26</span> "El dueño del departamento es quien decide" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Aclarar que el internet es un servicio personal del inquilino y solicitar contacto del dueño si se requiere autorización técnica.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Entiendo. Sin embargo, el contrato de internet es un servicio a nombre del inquilino, sin afectar la propiedad. De todos modos, si el propietario requiere validar la instalación no invasiva de fibra, nosotros le enviamos la ficha técnica."
+                            <br><span class="proof-tag">Respaldo: Instalación No Invasiva</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Páseme el teléfono del propietario para explicarle rápido o dígame: ¿cuándo nos acepta la visita para evaluar el punto de fibra?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #27 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#27</span> "No soy yo quien paga el recibo de internet" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Identificar al pagador/titular de la economía familiar y buscar el puente de contacto.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo. Para no hacerle perder tiempo a usted, le preparo una cotización formal estructurada con la oferta especial de hoy para que se la muestre a la persona encargada."
+                            <br><span class="proof-tag">Respaldo: Cotización formal express</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "¿A qué hora exacta llega la persona que paga el recibo para llamarle directamente: a las 6:00 PM o a las 7:30 PM?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #28 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#28</span> "Déjame conversarlo con mi familia primero" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Respetar el tiempo pero cerrar fecha y hora exacta de re-llamada.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Me parece excelente. Para que lo conversen con datos reales en la mesa, le envío el resumen del plan por WhatsApp con el descuento aplicado."
+                            <br><span class="proof-tag">Respaldo: Ficha Informativa Digital</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Se los envío ahora mismo. ¿Les parece bien si los vuelvo a llamar hoy a las 8:00 PM o prefieren mañana a las 10:00 AM tras la reunión familiar?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #29 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#29</span> "Hoy no puedo tomar ninguna decisión" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Generar compromiso reservado con tiempo límite.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "No se preocupe, no le pido que decida hoy. Lo que haré es bloquear la tarifa en promoción por 24 horas en el sistema para que no se la asignen a otro cliente."
+                            <br><span class="proof-tag">Respaldo: Bloqueo de tarifa 24 hrs</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para activar este bloqueo temporal, ¿me confirma sus nombres completitos y su distrito?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #30 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#30</span> "No soy el titular de la línea" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Empoderar al usuario gestor del servicio en casa y acelerar la solución comercial.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "No hay problema con eso. Muchas personas que utilizan el internet en casa son quienes realmente gestionan y disfrutan la mejora del servicio en el día a día. Nosotros le ayudamos con todo el trámite de forma rápida y sencilla para que no tenga complicaciones con el titular."
+                            <br><span class="proof-tag">Respaldo: Gestión Fácil de Cambio</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para darle una solución rápida y ver los planes disponibles, ¿se encuentra en Lima o en provincia?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #31 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#31</span> "Quiero pensarlo / Quiero consultarlo con pareja y/o familiar (Enfoque en Descarte)" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Pregunta de descarte triple (precio, beneficios o decisión familiar) y preregistro sin compromiso.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo perfectamente, las decisiones del hogar se conversan en familia. Ayúdeme a entender algo: ¿quiere pensarlo por el precio, tiene alguna duda sobre los beneficios o es netamente para definirlo en casa? Para que lo conversen con datos reales y no pierdan la promoción del mes, dejamos generada la solicitud de reserva hoy a costo cero."
+                            <br><span class="proof-tag">Respaldo: Reserva de Promoción sin Compromiso</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para asegurarle el cupo promocional en el sistema mientras lo conversan en la cena, ¿me brinda su DNI para hacer la reserva?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 5 -->
+            <div class="category-group" data-category="Postergar">
+                <div class="category-title"><span>5</span> Objeciones para Postergar / Tiempo (8)</div>
+                <!-- Obj #32 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#32</span> "Déjame pensarlo" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Descubrir la objeción oculta detrás de la cortina de humo "pensarlo".</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Claro que sí. Normalmente cuando un cliente me dice que quiere pensarlo es por dos razones: o el precio se sale del presupuesto o tiene alguna duda sobre la calidad. En su caso, ¿cuál de las dos es?"
+                            <br><span class="proof-tag">Respaldo: Técnica de Descarte Real</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Si resolvemos esa duda comercial en este minuto, ¿agendamos la instalación para mañana mismo?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #33 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#33</span> "Después los vuelvo a llamar yo" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Aclarar que los ejecutivos telefónicos manejan las ofertas y la central genérica no las respeta.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Le comento que si llama a la central general le darán el precio regular sin la promoción de mi canal directo. Para que no pierda su bono de descuento, yo asumiré su atención personal."
+                            <br><span class="proof-tag">Respaldo: Atención canal exclusivo</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "¿A qué hora le conviene que lo timbre yo directamente: a las 11:00 AM o a las 4:00 PM?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #34 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#34</span> "Llámame otro día" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Amarrar día y hora específica sin dejar margen a "cualquier momento".</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Con todo gusto. Para no incomodarlo en momentos de trabajo o descanso, dígame qué día tiene 3 minutos libres."
+                            <br><span class="proof-tag">Respaldo: Respeto al tiempo del prospecto</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "¿Le timbro el jueves a las 10 AM o el viernes a las 3 PM en punto?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #35 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#35</span> "Ahora estoy ocupado/a, no tengo tiempo" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Dar un speech ultrarrápido de 30 segundos centrados en el beneficio clave y reprogramar.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Mil disculpas. Le quito solo 15 segundos: le llamaba porque habilitamos 100% fibra en su calle con promoción de costo cero de instalación."
+                            <br><span class="proof-tag">Respaldo: Speech Express 15 seg</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "¿Le vuelvo a marcar en 2 horas o prefiere a las 6:30 PM cuando salga de sus labores?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #36 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#36</span> "Primero quiero terminar mi contrato actual con mi operador" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Programar la instalación a futuro para hacer match con el fin de su contrato sin traslape.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Es perfecto. Nosotros no queremos que pague doble. Dejamos todo coordinado y programamos la instalación de WIN exactamente un día antes de que corte su servicio actual."
+                            <br><span class="proof-tag">Respaldo: Cero cobro traslapado</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "¿Qué día del mes vence su recibo actual: a quincena o a fin de mes?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #37 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#37</span> "Cuando se me venza la permanencia recién me cambio" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Explicar norma OSIPTEL de libertad por mal servicio (cumplimiento del 70%).</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Recuerde que por normativa de OSIPTEL, si su operador actual no le entrega la velocidad contratada de manera continua, usted puede resolver el contrato sin penalidad de permanencia."
+                            <br><span class="proof-tag">Respaldo: Norma de Calidad OSIPTEL</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Validemos su línea actual. ¿Cuál es su operador presente para indicarle cómo proceder sin pagar penalidades?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #38 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#38</span> "Ya me llamaron, ya me dieron la información" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Reconectar con el valor del uso familiar y la oportunidad del bono de llamadas directas.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Excelente que ya lo hayan contactado. Lo que siempre recordamos a nuestros clientes es que el internet hoy no es solo un servicio más, es parte fundamental de la vida diaria de la familia para el trabajo, estudio y entretenimiento. En mi canal directo contamos con beneficios exclusivos de instalación que no le dieron en la llamada general."
+                            <br><span class="proof-tag">Respaldo: Canal Directo con Beneficios Exclusivos</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para validar si su dirección califica al bono de costo S/ 0 de instalación, ¿cuántas personas usan el internet en su casa?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #39 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#39</span> "Tengo contrato con mi operador / no quiero pagar penalidad" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Uso del derecho de resolución de contrato OSIPTEL por incumplimiento de velocidad (>70%).</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo su inquietud. Recuerde que por norma de OSIPTEL, si su operador actual no le entrega de forma continua más del 70% de la velocidad contratada en horas punta, usted tiene el derecho legal de cancelar el contrato sin pagar ninguna penalidad por incumplimiento del servicio. Usted merece un internet que funcione por lo que paga."
+                            <br><span class="proof-tag">Respaldo: Norma OSIPTEL de Calidad (>70% Velocidad)</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para verificar si su zona aplica a la promoción de migración protegida, ¿en qué distrito se encuentra?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 6 -->
+            <div class="category-group" data-category="Instalación">
+                <div class="category-title"><span>6</span> Objeciones sobre la Instalación y Técnicos (6)</div>
+                <!-- Obj #40 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#40</span> "No quiero que hagan agujeros ni rompan mi pared" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Garantizar cableado por ductería interna limpia y no invasiva.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Tranquilo. Nuestros técnicos están certificados para utilizar los ductos internos del domicilio. La fibra de WIN es ultra delgada y flexible, no requiere romper paredes."
+                            <br><span class="proof-tag">Respaldo: Instalación Estética Certificada</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para indicarle al técnico que lleve el kit estético de cableado, ¿dónde ubicará el router: en la sala o en un dormitorio?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #41 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#41</span> "¿Cuánto tiempo se van a demorar instalando?" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Dar tiempo exacto y comprometer puntualidad.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "El proceso promedio toma entre 45 y 60 minutos. El equipo llega con cita agendada de forma puntual para no interferir con sus planes del día."
+                            <br><span class="proof-tag">Respaldo: Protocolo de Puntualidad WIN</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "¿Le reservo la cita para las 9:00 AM que inician las atenciones o prefiere al mediodía?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #42 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#42</span> "No me gusta que extraños entren a mi casa" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Tranquilizar con la identificación oficial, uniforme y código de técnico en app.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo perfectamente su seguridad. Todos nuestros técnicos acuden uniformados, con fotocheck e identificación. Además, en su WhatsApp recibe la foto y nombre del técnico antes de que toque su puerta."
+                            <br><span class="proof-tag">Respaldo: Verificación Técnica vía SMS/WA</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para enviarle la confirmación del técnico asignado, ¿me brinda su correo o su WhatsApp personal?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #43 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#43</span> "¿Y si el técnico no viene a la hora prometida?" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Ofrecer canal directo de seguimiento del despacho.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "En WIN monitoreamos el GPS del técnico en tiempo real. Si surge cualquier tráfico, el sistema le notifica con anticipación a su celular."
+                            <br><span class="proof-tag">Respaldo: Monitoreo GPS de cuadrillas</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Agendemos en el primer turno para asegurar la máxima puntualidad. ¿Prepara su DNI en físico para el día de mañana?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #44 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#44</span> "No quiero esperar muchos días para que vengan a instalar" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Ofrecer instalación prioritaria express en 24-48 horas max.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "¡Para nada! Con nuestro canal telefónico la agenda es directa y rápida: podemos gestionar su instalación dentro de las próximas 24 a 48 horas máximo."
+                            <br><span class="proof-tag">Respaldo: Agenda Express Televentas</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Aprovechemos el cupo express libre: ¿lo programo para mañana mismo en la tarde?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #45 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#45</span> "Quiero anular primero mi servicio actual" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Evitar el corte del servicio recomendando instalar WIN primero y luego solicitar la baja.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Entiendo su postura, sin embargo, es mucho mejor instalar WIN primero para evitar que su hogar se quede sin conexión a internet ni un solo día. Una vez que nuestro técnico deje WIN 100% activo y probado en su casa, usted se comunica con su operador actual para solicitar la baja sin riesgo de quedar desconectado."
+                            <br><span class="proof-tag">Respaldo: Continuidad de Servicio Garantizada</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para dejar programada la visita del técnico y asegurar su línea activa, ¿la instalación la desearía en el primer o segundo piso?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 7 -->
+            <div class="category-group" data-category="Experiencia">
+                <div class="category-title"><span>7</span> Mala Experiencia Previa y Entretenimiento (9)</div>
+                <!-- Obj #46 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#46</span> "Ya tuve malas experiencias con otros operadores y no confío" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Empatizar sinceramente y diferenciar la arquitectura de WIN.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Le entiendo perfectamente, a muchos de nuestros clientes les pasó lo mismo antes de venir a WIN. La gran diferencia es que nosotros no revendemos líneas ni usamos cables viejos: la red es 100% de fibra propia, construida para ser estable."
+                            <br><span class="proof-tag">Respaldo: Infraestructura 100% Propia</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Dese la oportunidad de tener una experiencia totalmente renovada. ¿Registramos sus datos con la promo actual?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #47 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#47</span> "Siempre me prometen una cosa por teléfono y luego cobran otra" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Garantizar audio grabado y lectura formal de condiciones antes del cierre.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Para su total tranquilidad, esta llamada queda auditada y grabada. Antes de terminar realizamos la lectura oficial de contrato donde queda especificado el precio exacto sin sorpresas en su recibo."
+                            <br><span class="proof-tag">Respaldo: Grabación de Seguridad Acreditada</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Hagamos la lectura de beneficios en este instante: ¿su número de celular de contacto principal es este mismo?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #48 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#48</span> "Me da miedo tener problemas para cancelar después si no me gusta" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Aclarar la política de baja simple y transparente amparada por OSIPTEL.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "En WIN no retenemos a nadie a la fuerza. El trámite de cancelación se realiza por la app o llamada en minutos de manera transparente conforme a la ley de OSIPTEL."
+                            <br><span class="proof-tag">Respaldo: Trámite Simple de Cancelación</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Confíe en nuestro servicio. ¿Le enviamos el duplicado del contrato a su correo para que lo conserve?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #49 -->
+                <div class="objection-item is-hot">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#49</span> "¿Por qué el aplicativo de TV (WINTV / DGO) no se va a poner lento en partidos?" <span class="badge-hot">🔥 ALTA FRECUENCIA</span></span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Explicar la arquitectura para eventos masivos y menor desfase en L1 MAX.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Nuestra red tiene servidores CDN locales optimizados para eventos masivos de fútbol. Confirmado por la misma L1 MAX, WIN cuenta con el menor desfase de tiempo (delay) entre la jugada real y su TV."
+                            <br><span class="proof-tag">Respaldo: Menor Delay L1 MAX / DGO</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para dejarle configuradas las apps en sus televisores, ¿cuántos Smart TVs tiene en casa: 2 o 3?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #50 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#50</span> "Tengo un paquete total con mi operador (Móvil + Internet)" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Demostrar la ventaja de desvincular el internet fijo del plan móvil para no arriesgar la casa.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Entiendo la comodidad del paquete único, pero cuando falla el internet fijo le amarran todo el servicio. Separando el internet del hogar con WIN gana velocidad 100% fibra sin arriesgar la conexión de su familia."
+                            <br><span class="proof-tag">Respaldo: Independencia y Calidad de Red</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Hagamos la prueba de cobertura en su zona. ¿Su distrito es Breña o Cercado de Lima?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #51 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#51</span> "Tuve malas experiencias con otro operador (Atención Personalizada)" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Empatía por experiencia previa negativa y contraste con el nivel de satisfacción de WIN.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Comprendo perfectamente, nadie quiere pasar por eso otra vez. A mí y a miles de nuestros clientes también nos pasó antes de cambiarnos. Por eso WIN nació únicamente con fibra óptica propia y atención personalizada, alcanzando el 83% de satisfacción en OSIPTEL."
+                            <br><span class="proof-tag">Respaldo: 83% Satisfacción de Usuario OSIPTEL</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para garantizarle que su experiencia sea impecable, ¿me cuenta cuál fue el problema principal con su operador anterior para solucionarlo desde el día 1?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #52 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#52</span> "¿Cómo sé que su aplicativo (WINTV O DGO) no se va a poner lento en un partido?" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Resaltar los servidores CDN dedicados y la acreditación oficial de L1 MAX sobre menor delay.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Entiendo, es una preocupación muy válida porque hay aplicativos de otras empresas que colapsan en eventos masivos. Sin embargo, nuestra plataforma WINTV y DGO está diseñada con servidores CDN dedicados para soportar alto tráfico. De hecho, confirmado por L1 MAX, tenemos el menor tiempo de desfase (delay) entre la jugada real en el estadio y su pantalla."
+                            <br><span class="proof-tag">Respaldo: Acreditado por L1 MAX - Menor Delay</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para configurar sus televisores con la señal de fútbol en alta definición desde mañana, ¿cuántas Smart TVs tiene en casa?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #53 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#53</span> "¿Ustedes también tienen para ver la Champions League?" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Confirmar transmisión de Champions League vía DGO / ESPN / DSports en múltiples dispositivos.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "¡Sí, totalmente! Puede ver la Champions League en vivo a través de nuestra plataforma DGO, ya que incluye los canales deportivos premium como DSports y ESPN. Con DGO accede a la app para ver los partidos en vivo en hasta 4 dispositivos en simultáneo, junto con la L1 MAX para el torneo local."
+                            <br><span class="proof-tag">Respaldo: DGO Multipantalla + Champions League & L1 MAX</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para indicarle la compatibilidad de sus equipos, ¿sus televisores son Smart TV que permiten descargar aplicativos o requiere un TV Box?"
+                        </div>
+                    </div>
+                </div>
+                <!-- Obj #54 -->
+                <div class="objection-item ">
+                    <button class="objection-btn" onclick="toggleObjection(this)">
+                        <span class="obj-title-text"><span class="num">#54</span> "Tengo un servicio total con mi operador (Enfoque en Independencia)" </span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="objection-content">
+                        <div class="sec-header">
+                            <span class="sec-label label-tech">Técnica Telefónica</span>
+                        </div>
+                        <div class="block-box block-tech searchable">Demostrar el riesgo de amarrar internet de casa con líneas móviles y ofrecer independencia técnica.</div>
+                        
+                        <div class="sec-header">
+                            <span class="sec-label label-resp">Ejemplo de Respuesta Telefónica</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Guión</button>
+                        </div>
+                        <div class="block-box block-resp searchable">
+                            "Es natural buscar tener todo en un solo recibo. Sin embargo, los operadores que ofrecen paquetes 'todo en uno' a menudo sacrifican la calidad del internet fijo para compensar el paquete. Nuestra propuesta le da internet 100% fibra óptica independiente y TV de alta definición sin restricciones de velocidad. Si mañana cambia su plan móvil, su internet de casa permanece intacto y sin penalidades."
+                            <br><span class="proof-tag">Respaldo: Conexión Fija Independiente y Sin Restricciones</span>
+                        </div>
+
+                        <div class="sec-header">
+                            <span class="sec-label label-close">Cierre Agresivo (Obligatorio)</span>
+                            <button class="btn-copy" onclick="copyBlockText(this)">📋 Copiar Cierre</button>
+                        </div>
+                        <div class="block-box block-close searchable">
+                            "Para verificar la cobertura y dejarle la mejor oferta independiente en pantalla, ¿me facilita su número de DNI?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+            ❌ No se encontraron objeciones con ese término de búsqueda.
+        </div>
+
+    </div>
+
+    <div class="floating-hud">
+        <div class="hud-status">
+            <div class="dot-live"></div>
+            <span>ASESOR EN LLAMADA</span>
+        </div>
+        <button class="btn-hud" onclick="openRandomHotModal()">⚡ Objeción Rápida</button>
+    </div>
+
+    <div class="hud-modal" id="hudModal">
+        <div class="hud-modal-card">
+            <span class="hud-modal-close" onclick="closeHudModal()">✕</span>
+            <div id="hudModalContent"></div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">✅ Texto copiado al portapapeles</div>
+
+    <script>
+    const originalTexts = new Map();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('win_theme_v6') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeUI(savedTheme);
+
+        document.querySelectorAll('.searchable, .obj-title-text').forEach((el, index) => {
+            el.dataset.textId = index;
+            originalTexts.set(index, el.innerHTML);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement.id !== 'searchInput') {
+                e.preventDefault();
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) searchInput.focus();
+            }
+            if (e.key === 'Escape') {
+                closeHudModal();
+            }
+        });
+    });
+
+    function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('win_theme_v6', newTheme);
+        updateThemeUI(newTheme);
+    }
+
+    function updateThemeUI(theme) {
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+        if (themeIcon && themeText) {
+            if (theme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Modo Claro';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Modo Oscuro';
+            }
+        }
+    }
+
+    function toggleCompactMode() {
+        document.body.classList.toggle('mode-compact');
+        const isCompact = document.body.classList.contains('mode-compact');
+        const compactText = document.getElementById('compactText');
+        const compactIcon = document.getElementById('compactIcon');
+        if (compactText) compactText.textContent = isCompact ? 'Modo Normal' : 'Modo Compacto';
+        if (compactIcon) compactIcon.textContent = isCompact ? '📱' : '⚡';
+    }
+
+    function toggleObjection(btn) {
+        const item = btn.closest('.objection-item');
+        if (item) {
+            item.classList.toggle('active');
+        }
+    }
+
+    function copyBlockText(btn) {
+        const parentSec = btn.closest('.sec-header');
+        const blockBox = parentSec ? parentSec.nextElementSibling : null;
+        if (!blockBox) return;
+        
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = blockBox.innerHTML;
+        
+        const proofTag = tempDiv.querySelector('.proof-tag');
+        if (proofTag) proofTag.remove();
+        
+        let cleanText = tempDiv.innerText.replace(/"/g, '').trim();
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(cleanText).then(() => {
+                showToast('📋 Copiado al portapapeles');
+                btn.classList.add('copied');
+                const origText = btn.textContent;
+                btn.textContent = '✓ ¡COPIADO!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.textContent = origText;
+                }, 1800);
+            }).catch(() => {
+                fallbackCopyText(cleanText, btn);
+            });
+        } else {
+            fallbackCopyText(cleanText, btn);
+        }
+    }
+
+    function fallbackCopyText(text, btn) {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            showToast('📋 Copiado al portapapeles');
+            btn.classList.add('copied');
+            const origText = btn.textContent;
+            btn.textContent = '✓ ¡COPIADO!';
+            setTimeout(() => {
+                btn.classList.remove('copied');
+                btn.textContent = origText;
+            }, 1800);
+        } catch (err) {
+            alert("No se pudo copiar automáticamente. Por favor selecciona el texto manualmente.");
+        }
+        document.body.removeChild(textArea);
+    }
+
+    function showToast(msg) {
+        const toast = document.getElementById('toast');
+        if (toast) {
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2200);
+        }
+    }
+
+    let activeCategory = 'all';
+    function filterByChip(cat, chipBtn) {
+        activeCategory = cat;
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        if (chipBtn) chipBtn.classList.add('active');
+        filterObjections();
+    }
+
+    function filterObjections() {
+        const searchInput = document.getElementById('searchInput');
+        const input = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const groups = document.querySelectorAll('.category-group');
+        let totalVisible = 0;
+
+        clearHighlights();
+
+        groups.forEach(group => {
+            const groupCategory = group.dataset.category;
+            let groupVisibleCount = 0;
+
+            const items = group.querySelectorAll('.objection-item');
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                const matchesSearch = text.includes(input);
+                const isHot = item.classList.contains('is-hot');
+
+                let matchesCategory = false;
+                if (activeCategory === 'all') matchesCategory = true;
+                else if (activeCategory === 'hot') matchesCategory = isHot;
+                else matchesCategory = (groupCategory === activeCategory);
+
+                if (matchesCategory && matchesSearch) {
+                    item.style.display = 'block';
+                    groupVisibleCount++;
+                    totalVisible++;
+
+                    if (input.length >= 2) {
+                        item.classList.add('active');
+                        highlightTextInItem(item, input);
+                    }
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('active');
+                }
+            });
+
+            group.style.display = (groupVisibleCount === 0) ? 'none' : 'block';
+        });
+
+        const resultsCount = document.getElementById('resultsCount');
+        const noResults = document.getElementById('noResults');
+        if (resultsCount) resultsCount.textContent = totalVisible + ' Objeciones';
+        if (noResults) noResults.style.display = (totalVisible === 0) ? 'block' : 'none';
+    }
+
+    function clearHighlights() {
+        document.querySelectorAll('.searchable, .obj-title-text').forEach(el => {
+            const id = el.dataset.textId;
+            if (id !== undefined && originalTexts.has(parseInt(id))) {
+                el.innerHTML = originalTexts.get(parseInt(id));
+            }
+        });
+    }
+
+    function highlightTextInItem(item, query) {
+        if (!query) return;
+        const elements = item.querySelectorAll('.searchable, .obj-title-text');
+        const safeQuery = escapeRegExp(query);
+        if (!safeQuery) return;
+        const regex = new RegExp('(' + safeQuery + ')', 'gi');
+
+        elements.forEach(el => {
+            const text = el.innerHTML;
+            if (!text.includes('<mark>')) {
+                el.innerHTML = text.replace(regex, '<mark>$1</mark>');
+            }
+        });
+    }
+
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function openRandomHotModal() {
+        const hotItems = document.querySelectorAll('.objection-item.is-hot');
+        if (hotItems.length === 0) return;
+        const randomItem = hotItems[Math.floor(Math.random() * hotItems.length)];
+        
+        const clone = randomItem.cloneNode(true);
+        clone.classList.add('active');
+        const modalContent = document.getElementById('hudModalContent');
+        if (modalContent) {
+            modalContent.innerHTML = '';
+            modalContent.appendChild(clone);
+        }
+        
+        const hudModal = document.getElementById('hudModal');
+        if (hudModal) hudModal.style.display = 'flex';
+    }
+
+    function closeHudModal() {
+        const hudModal = document.getElementById('hudModal');
+        if (hudModal) hudModal.style.display = 'none';
+    }
+</script>
+</body>
+</html>
